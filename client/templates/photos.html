@@ -5,9 +5,11 @@ animationIn: hingeInFromMiddleY bounceInOut
 animationOut:  zoomOut bounceInOut
 ---
 <div class=" grid-block small-12">
-	<h3>REVIEWS</h3>
+  <!-- Add search bar -->
+	<h3 class="text-center">Photos</h3>
 </div>
-<div class=" grid-block small-12 small-up-1 medium-up-2 large-up-3" ng-init="photos = [
+<div class=" grid-block small-12 small-up-1 medium-up-2 large-up-3" 
+    ng-init="photos = [
       {class: 'alert', location:'Cortona, Italy'} ,
       {class: 'primary', location:'Sabi Sands, South Africa'},
       {class: 'dark', location:'Munich, Germany'},
@@ -26,10 +28,12 @@ animationOut:  zoomOut bounceInOut
       {class: 'success', location:'Masai Mara, Kenya'},
       {class: 'warning', location:'Amman, Jordan'},
       {class: 'alert', location:'Cortona, Italy'}
-      ]">
+      ]"
+  >
+
   <div ng-repeat="photo in photos" class="grid-content">
     <div class="{{photo.class}} card">
-      {{photo.image}}
+      <!-- if you want custom photos {{photo.image}} -->
       <img src="http://lorempixel.com/output/city-q-c-640-480-7.jpg">
       <div class="card-section">
         <h4>{{photo.location}}</h4>
